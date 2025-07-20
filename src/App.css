@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 27vh; /* Or a fixed height like 400px */
+}
+
+#content #map {
+  height:auto !important;
+}
+
+.loader-container {
+  position: fixed; /* Position relative to the viewport */
+  top: 50%; /* Move the top edge to the middle */
+  left: 50%; /* Move the left edge to the middle */
+  transform: translate(-50%, -50%); /* Adjust for the spinner's own dimensions */
+  z-index: 1050; /* Ensure it's above other content, if needed */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Take full viewport height */
+  width: 100vw; /* Take full viewport width */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: add a semi-transparent overlay */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

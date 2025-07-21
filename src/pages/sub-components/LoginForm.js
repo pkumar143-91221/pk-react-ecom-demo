@@ -35,7 +35,7 @@ export const LoginForm = (props) => {
     }
     return (
         <>
-            <form onSubmit={handleSubmitLogin} method="post">
+            <form onSubmit={(e) => handleSubmitLogin(e)} method="post">
                 <div className="form-group">
                     {
                         props?.showLabel ?

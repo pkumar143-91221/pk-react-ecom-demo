@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useAuth } from "../hooks/AuthContext";
+import { useAuth } from "../../hooks/AuthContext";
 
 export const CustomerSidebar = () => {
     const auth = useAuth();

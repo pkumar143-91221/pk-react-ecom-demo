@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
-import Breadcrumb from "../components/includes/breadcrumb";
-import { CustomerSidebar } from "../components/includes/CustomerSidebar";
+import Breadcrumb from "./sub-components/breadcrumb";
+import { CustomerSidebar } from "./sub-components/CustomerSidebar";
 
 export const OrderDetail = () => {
     const params = useParams();
@@ -51,7 +51,7 @@ export const OrderDetail = () => {
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <a href="#">
+                                                <a href="/#">
                                                     <img
                                                         src="/img/detailsquare.jpg"
                                                         alt="White Blouse Armani"
@@ -59,7 +59,7 @@ export const OrderDetail = () => {
                                                 </a>
                                             </td>
                                             <td>
-                                                <a href="#">White Blouse Armani</a>
+                                                <a href="/#">White Blouse Armani</a>
                                             </td>
                                             <td>2</td>
                                             <td>$123.00</td>
@@ -68,7 +68,7 @@ export const OrderDetail = () => {
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a href="#">
+                                                <a href="/#">
                                                     <img
                                                         src="/img/basketsquare.jpg"
                                                         alt="Black Blouse Armani"
@@ -76,7 +76,7 @@ export const OrderDetail = () => {
                                                 </a>
                                             </td>
                                             <td>
-                                                <a href="#">Black Blouse Armani</a>
+                                                <a href="/#">Black Blouse Armani</a>
                                             </td>
                                             <td>1</td>
                                             <td>$200.00</td>

@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import Header from './components/includes/Header';
 import Footer from './components/includes/Footer';
 import AppLoader from './components/includes/AppLoader';
-import { AuthProvider } from './components/hooks/AuthContext';
+import { AuthProvider } from './hooks/AuthContext';
 
 class Layout extends React.Component {
 

@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Breadcrumb from '../components/includes/breadcrumb';
+import Breadcrumb from './sub-components/breadcrumb';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { hideLoader, showLoader } from '../actions/loader-action';
-import { useAuth } from '../components/hooks/AuthContext';
-import { LoginForm } from '../components/includes/LoginForm';
+import { LoginForm } from './sub-components/LoginForm';
 
 function RegisterAccount() {
     const [formData, setFormData] = useState({ name: "", email: "", password: "" });
     const [errors, setErrors] = useState({});
 
     const dispatch = useDispatch();
-
-    const auth = useAuth();
 
     useEffect(() => {
         console.log("Errors ::>", errors);

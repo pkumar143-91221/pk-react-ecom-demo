@@ -1,6 +1,6 @@
 import React from 'react'
-import LeftSidebar from '../../components/includes/left-sidebar';
-import Breadcrumb from '../../components/includes/breadcrumb';
+import LeftSidebar from '../sub-components/left-sidebar';
+import Breadcrumb from '../sub-components/breadcrumb';
 import { Link } from 'react-router-dom';
 
 function FAQPage() {
@@ -32,7 +32,7 @@ function FAQPage() {
                                 <div id="headingOne" className="card-header p-0 border-0">
                                     <h4 className="mb-0">
                                         <a
-                                            href="#"
+                                            href="/#"
                                             data-toggle="collapse"
                                             data-target="#collapseOne"
                                             aria-expanded="true"
@@ -71,7 +71,7 @@ function FAQPage() {
                                 <div id="headingTwo" className="card-header p-0 border-0">
                                     <h4 className="mb-0">
                                         <a
-                                            href="#"
+                                            href="/#"
                                             data-toggle="collapse"
                                             data-target="#collapseTwo"
                                             aria-expanded="false"
@@ -107,7 +107,7 @@ function FAQPage() {
                                 <div id="headingThree" className="card-header p-0 border-0">
                                     <h4 className="mb-0">
                                         <a
-                                            href="#"
+                                            href="/#"
                                             data-toggle="collapse"
                                             data-target="#collapseThree"
                                             aria-expanded="false"

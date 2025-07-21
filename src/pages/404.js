@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Breadcrumb from "../components/includes/breadcrumb";
+import Breadcrumb from "./sub-components/breadcrumb";
 
 const NotFoundPage = () => {
     const breadcrumb = [

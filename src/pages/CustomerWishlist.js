@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Breadcrumb from "../components/includes/breadcrumb";
-import { CustomerSidebar } from "../components/includes/CustomerSidebar";
+import Breadcrumb from "./sub-components/breadcrumb";
+import { CustomerSidebar } from "./sub-components/CustomerSidebar";
 
 export const CustomerWishlist = () => {
     const breadcrumb = [

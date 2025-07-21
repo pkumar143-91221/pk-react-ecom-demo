@@ -55,6 +55,9 @@ $(function () {
         $("#login-modal").modal('hide')
     })
 
+    $("#closeHeaderSearch").on("submit", function() {
+        $("#search").collapse('toggle')
+    })
 
 
     // productDetailGallery(4000);

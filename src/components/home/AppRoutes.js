@@ -11,6 +11,13 @@ import { Dashboard } from "../../pages/Dashboard";
 import { CustomerOrders } from "../../pages/CustomerOrders";
 import { CustomerWishlist } from "../../pages/CustomerWishlist";
 import { OrderDetail } from "../../pages/OrderDetail";
+import { CheckoutAddress } from "../../pages/CheckoutAddress";
+import { BasketPage } from "../../pages/BasketPage";
+import { DeliveryMethod } from "../../pages/DeliveryMethod";
+import { PaymentMethod } from "../../pages/PaymentMethod";
+import { OrderReview } from "../../pages/OrderReview";
+import { ProductsPage } from "../../pages/ProductsPage";
+import { ProductDetailsPage } from "../../pages/ProductDetailsPage";
 // const router = createBrowserRouter([
 //   {
 //     element: <Layout />,
@@ -41,13 +48,21 @@ function AppRoutes() {
                     </Route>
                     <Route path="/faq" element={<FAQPage />}/>
                     <Route path="/contact" element={<ConctactUsPage />}/>
-                    <Route path="*" element={<NotFoundPage />} />
+                    <Route path="/products" element={<ProductsPage />} />
+                    <Route path="/product-details" element={<ProductDetailsPage />} />
+                    <Route path="/basket" element={<BasketPage />} />
+                    <Route path="/checkout-address" element={<CheckoutAddress />} />
+                    <Route path="/delivery-method" element={<DeliveryMethod />} />
+                    <Route path="/payment-method" element={<PaymentMethod />} />
+                    <Route path="/order-review" element={<OrderReview />} />
+                    
                     <Route element={<PrivateRoutes />}>
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/customer-orders" element={<CustomerOrders />} />
                         <Route path="/customer-order/:id" element={<OrderDetail />} />
                         <Route path="/customer-wishlist" element={<CustomerWishlist />} />
                     </Route>
+                    <Route path="*" element={<NotFoundPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>

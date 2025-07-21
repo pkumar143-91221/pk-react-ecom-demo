@@ -1,6 +1,6 @@
 
-import LeftSidebar from '../../components/includes/left-sidebar';
-import Breadcrumb from '../../components/includes/breadcrumb';
+import LeftSidebar from '../sub-components/left-sidebar';
+import Breadcrumb from '../sub-components/breadcrumb';
 import { Link } from 'react-router-dom';
 function AboutPage() {
     const breadcrumb = [

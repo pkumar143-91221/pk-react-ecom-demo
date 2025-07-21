@@ -2,8 +2,8 @@ import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import * as L from "leaflet"
-import LeftSidebar from '../../components/includes/left-sidebar';
-import Breadcrumb from '../../components/includes/breadcrumb';
+import LeftSidebar from '../sub-components/left-sidebar';
+import Breadcrumb from '../sub-components/breadcrumb';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { hideLoader, showLoader } from '../../actions/loader-action';

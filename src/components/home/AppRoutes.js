@@ -37,7 +37,6 @@ function AppRoutes() {
             <Routes>
                 <Route path="/" element={<Layout />} >
                     <Route index element={<Index />}/>
-                    {/* <Route /> */}
                     <Route path="/about-us" element={<Outlet />}>
                         <Route index element={<AboutPage />} />
                         <Route path="contact" element={<ConctactUsPage />} />
@@ -49,7 +48,7 @@ function AppRoutes() {
                     <Route path="/faq" element={<FAQPage />}/>
                     <Route path="/contact" element={<ConctactUsPage />}/>
                     <Route path="/products" element={<ProductsPage />} />
-                    <Route path="/product-details" element={<ProductDetailsPage />} />
+                    <Route path="/product-details/:id" element={<ProductDetailsPage />} />
                     <Route path="/basket" element={<BasketPage />} />
                     <Route path="/checkout-address" element={<CheckoutAddress />} />
                     <Route path="/delivery-method" element={<DeliveryMethod />} />

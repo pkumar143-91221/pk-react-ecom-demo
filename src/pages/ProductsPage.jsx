@@ -8,7 +8,7 @@ export const ProductsPage = () => {
     const location = useLocation();
     useEffect(() => {
         console.log("Passed data ::>", location?.state)
-    }, [location]);
+    }, []);
     const productData = useSelector((state) => state.productData)
     const breadcrumb = [
         <Link to="/">Home</Link>,
@@ -22,28 +22,28 @@ export const ProductsPage = () => {
                         <div className="flip-container">
                             <div className="flipper">
                                 <div className="front">
-                                    <a href="detail.html">
+                                    <Link to={"/product-details/" + productItem.id}>
                                         <img
                                             src={productItem.imageFront}
                                             alt=""
                                             className="img-fluid"
                                         />
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="back">
-                                    <a href="detail.html">
+                                    <Link to={"/product-details/" + productItem.id}>
                                         <img
                                             src={productItem.imageBack}
                                             alt=""
                                             className="img-fluid"
                                         />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
-                        <a href="detail.html" className="invisible">
-                            <img src="img/product1.jpg" alt="" className="img-fluid" />
-                        </a>
+                        <Link to={"/product-details/" + productItem.id} className="invisible">
+                            <img src="/img/product1.jpg" alt="" className="img-fluid" />
+                        </Link>
                         <div className="text">
                             <h3>
                                 <a href="detail.html">
@@ -64,7 +64,7 @@ export const ProductsPage = () => {
 
                             </p>
                             <p className="buttons">
-                                <Link to={"/product-details"} className="btn btn-outline-secondary">
+                                <Link to={"/product-details/" + productItem.id } className="btn btn-outline-secondary">
                                     View detail
                                 </Link>
                                 <a href="basket.html" className="btn btn-primary">
@@ -271,7 +271,7 @@ export const ProductsPage = () => {
                         {/* *** MENUS AND FILTERS END ****/}
                         <div className="banner">
                             <a href="/#">
-                                <img src="img/banner.jpg" alt="sales 2014" className="img-fluid" />
+                                <img src="/img/banner.jpg" alt="sales 2014" className="img-fluid" />
                             </a>
                         </div>
                     </div>

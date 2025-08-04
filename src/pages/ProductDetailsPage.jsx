@@ -1,4 +1,16 @@
+import { useEffect } from "react";
+
 export const ProductDetailsPage = () => {
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = '/js/front.js';
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+          document.body.removeChild(script); // Clean up on unmount
+        };
+      }, []);
     return (
         <>
             <div className="container">
@@ -205,7 +217,7 @@ export const ProductDetailsPage = () => {
                         {/* *** MENUS AND FILTERS END ****/}
                         <div className="banner">
                             <a href="#">
-                                <img src="img/banner.jpg" alt="sales 2014" className="img-fluid" />
+                                <img src="/img/banner.jpg" alt="sales 2014" className="img-fluid" />
                             </a>
                         </div>
                     </div>
@@ -250,20 +262,20 @@ export const ProductDetailsPage = () => {
                                         <a href="basket.html" className="btn btn-primary">
                                             <i className="fa fa-shopping-cart" /> Add to cart
                                         </a>
-                                        <a href="basket.html" className="btn btn-outline-primary">
+                                        <a href="basket.html" className="btn btn-outline-primarya">
                                             <i className="fa fa-heart" /> Add to wishlist
                                         </a>
                                     </p>
                                 </div>
                                 <div data-slider-id="1" className="owl-thumbs">
                                     <button className="owl-thumb-item">
-                                        <img src="img/detailsquare.jpg" alt="" className="img-fluid" />
+                                        <img src="/img/detailsquare.jpg" alt="" className="img-fluid" />
                                     </button>
                                     <button className="owl-thumb-item">
-                                        <img src="img/detailsquare2.jpg" alt="" className="img-fluid" />
+                                        <img src="/img/detailsquare2.jpg" alt="" className="img-fluid" />
                                     </button>
                                     <button className="owl-thumb-item">
-                                        <img src="img/detailsquare3.jpg" alt="" className="img-fluid" />
+                                        <img src="/img/detailsquare3.jpg" alt="" className="img-fluid" />
                                     </button>
                                 </div>
                             </div>
@@ -326,7 +338,7 @@ export const ProductDetailsPage = () => {
                                             <div className="front">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product2.jpg"
+                                                        src="/img/product2.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -335,7 +347,7 @@ export const ProductDetailsPage = () => {
                                             <div className="back">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product2_2.jpg"
+                                                        src="/img/product2_2.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -344,7 +356,7 @@ export const ProductDetailsPage = () => {
                                         </div>
                                     </div>
                                     <a href="detail.html" className="invisible">
-                                        <img src="img/product2.jpg" alt="" className="img-fluid" />
+                                        <img src="/img/product2.jpg" alt="" className="img-fluid" />
                                     </a>
                                     <div className="text">
                                         <h3>Fur coat</h3>
@@ -360,7 +372,7 @@ export const ProductDetailsPage = () => {
                                             <div className="front">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product1.jpg"
+                                                        src="/img/product1.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -369,7 +381,7 @@ export const ProductDetailsPage = () => {
                                             <div className="back">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product1_2.jpg"
+                                                        src="/img/product1_2.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -378,7 +390,7 @@ export const ProductDetailsPage = () => {
                                         </div>
                                     </div>
                                     <a href="detail.html" className="invisible">
-                                        <img src="img/product1.jpg" alt="" className="img-fluid" />
+                                        <img src="/img/product1.jpg" alt="" className="img-fluid" />
                                     </a>
                                     <div className="text">
                                         <h3>Fur coat</h3>
@@ -394,7 +406,7 @@ export const ProductDetailsPage = () => {
                                             <div className="front">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product3.jpg"
+                                                        src="/img/product3.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -403,7 +415,7 @@ export const ProductDetailsPage = () => {
                                             <div className="back">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product3_2.jpg"
+                                                        src="/img/product3_2.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -412,7 +424,7 @@ export const ProductDetailsPage = () => {
                                         </div>
                                     </div>
                                     <a href="detail.html" className="invisible">
-                                        <img src="img/product3.jpg" alt="" className="img-fluid" />
+                                        <img src="/img/product3.jpg" alt="" className="img-fluid" />
                                     </a>
                                     <div className="text">
                                         <h3>Fur coat</h3>
@@ -435,7 +447,7 @@ export const ProductDetailsPage = () => {
                                             <div className="front">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product2.jpg"
+                                                        src="/img/product2.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -444,7 +456,7 @@ export const ProductDetailsPage = () => {
                                             <div className="back">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product2_2.jpg"
+                                                        src="/img/product2_2.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -453,7 +465,7 @@ export const ProductDetailsPage = () => {
                                         </div>
                                     </div>
                                     <a href="detail.html" className="invisible">
-                                        <img src="img/product2.jpg" alt="" className="img-fluid" />
+                                        <img src="/img/product2.jpg" alt="" className="img-fluid" />
                                     </a>
                                     <div className="text">
                                         <h3>Fur coat</h3>
@@ -469,7 +481,7 @@ export const ProductDetailsPage = () => {
                                             <div className="front">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product1.jpg"
+                                                        src="/img/product1.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -478,7 +490,7 @@ export const ProductDetailsPage = () => {
                                             <div className="back">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product1_2.jpg"
+                                                        src="/img/product1_2.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -487,7 +499,7 @@ export const ProductDetailsPage = () => {
                                         </div>
                                     </div>
                                     <a href="detail.html" className="invisible">
-                                        <img src="img/product1.jpg" alt="" className="img-fluid" />
+                                        <img src="/img/product1.jpg" alt="" className="img-fluid" />
                                     </a>
                                     <div className="text">
                                         <h3>Fur coat</h3>
@@ -503,7 +515,7 @@ export const ProductDetailsPage = () => {
                                             <div className="front">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product3.jpg"
+                                                        src="/img/product3.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -512,7 +524,7 @@ export const ProductDetailsPage = () => {
                                             <div className="back">
                                                 <a href="detail.html">
                                                     <img
-                                                        src="img/product3_2.jpg"
+                                                        src="/img/product3_2.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -521,7 +533,7 @@ export const ProductDetailsPage = () => {
                                         </div>
                                     </div>
                                     <a href="detail.html" className="invisible">
-                                        <img src="img/product3.jpg" alt="" className="img-fluid" />
+                                        <img src="/img/product3.jpg" alt="" className="img-fluid" />
                                     </a>
                                     <div className="text">
                                         <h3>Fur coat</h3>

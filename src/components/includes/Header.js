@@ -4,8 +4,34 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/AuthContext';
 import { LoginForm } from '../../pages/sub-components/LoginForm';
 import { HeaderMenu } from './HeaderMenu';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+
+    const { t, i18n } = useTranslation();
+    const [currentLanguage, setCurrentLanguage] = React.useState(i18n.language);
+    const [theme, setTheme] = React.useState(() => {
+        const storedValue = localStorage.getItem('website::theme');
+        return storedValue !== null ? storedValue : 'style.default.css';
+    });
+
+    const onChangeTheme = (css) => {
+        setTheme(css);
+        var sheet = document.createElement('link');
+        sheet.rel = 'stylesheet';
+        sheet.href = '/css/' + css;
+        sheet.id = "theme-stylesheet"
+        sheet.type = 'text/css';
+        document.head.appendChild(sheet);
+        localStorage.setItem("website::theme", css);
+        console.log("Selected Theme::>", theme);
+        setTimeout(() => { document.querySelectorAll("link#theme-stylesheet")[0].remove(); }, 100);
+    }
+
+    const onLanguageChange = (lng) => {
+        setCurrentLanguage(lng);
+        i18n.changeLanguage(lng);
+    }
     // useEffect( () => {
     //     if (window.$){
     //         window.$("#closeLoginModal").on("click", function() {
@@ -23,12 +49,12 @@ function Header() {
     const [search, setSearch] = React.useState("");
     const auth = useAuth();
     const navigate = useNavigate();
-    
+
     const searchProducts = (e) => {
         e.preventDefault();
         console.log("Search ::>", search);
-        navigate("/products", {state: {search: search}});
-        setTimeout(() => {setSearch("")}, 200)
+        navigate("/products", { state: { search: search } });
+        setTimeout(() => { setSearch("") }, 200)
     }
 
     return (
@@ -56,8 +82,25 @@ function Header() {
                                                 <li className="list-inline-item"><Link to="register-account">Register</Link></li>
                                             </>
                                     }
-                                    <li className="list-inline-item"><Link to="contact">Contact</Link></li>
-                                    <li className="list-inline-item"><Link to="#">Recently viewed</Link></li>
+                                    <li className="list-inline-item">
+                                        <select defaultValue={currentLanguage} onChange={(e) => onLanguageChange(e.target.value)} className="form-select form-select-lg border-0" aria-label=".form-select-lg example">
+                                            <option value='en'>{t("languages.English")}</option>
+                                            <option value='hi'>{t("languages.Hindi")}</option>
+                                        </select>
+                                    </li>
+                                    {/* <li className="list-inline-item"><Link to="#">Recently viewed</Link></li> */}
+                                    <li className="list-inline-item">
+                                        <select defaultValue={theme} onChange={(e) => onChangeTheme(e.target.value)} className="form-select form-select-lg border-0" aria-label=".form-select-lg example">
+                                            
+                                            <option value='style.default.css'>Default</option>
+                                            <option value='style.blue.css'>Blue</option>
+                                            <option value='style.green.css'>Green</option>
+                                            <option value='style.red.css'>Red</option>
+                                            <option value='style.pink.css'>Pink</option>
+                                            <option value='style.sea.css'>Sea</option>
+                                            <option value='style.violet.css'>Violet</option>
+                                        </select>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

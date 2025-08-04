@@ -1,7 +1,6 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 
-const AppLoader = (props) => {
+const AppLoader = () => {
     const isLoading = useSelector((state) => state.loaderStatus)
     return(
         <>
